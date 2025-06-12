@@ -20,7 +20,7 @@ ARG BUILD_PARAM_RUN_COMMAND=node server.js
 # Base image stage
 FROM node:${BUILD_PARAM_NODE_VERSION}-alpine AS base
 RUN apk add --no-cache libc6-compat
-RUN npm install -g pnpm
+RUN corepack enable pnpm
 
 # Build dependencies stage
 FROM base AS deps
