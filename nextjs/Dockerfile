@@ -33,7 +33,7 @@ RUN if [ "${BUILD_PARAM_PACKAGE_MANAGER}" = "pnpm" ]; then \
   elif [ "${BUILD_PARAM_PACKAGE_MANAGER}" = "yarn" ]; then \
   yarn install --frozen-lockfile; \
   else \
-  npm install --production; \
+  npm ci; \
   fi
 
 # Build stage
