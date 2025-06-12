@@ -1,0 +1,23 @@
+{
+  "name": "Next.js",
+  "buildParameters": {
+    "nodeVersion": {
+      "type": "enum",
+      "default": "22",
+      "enum": ["18", "20", "22", "24"]
+    },
+    "packageManager": {
+      "type": "enum",
+      "default": "npm",
+      "enum": ["npm", "yarn", "pnpm"]
+    },
+    "buildCommand": {
+      "type": "string",
+      "default": "npm run build"
+    },
+    "startCommand": {
+      "type": "string",
+      "default": "node server.js"
+    }
+  }
+}
